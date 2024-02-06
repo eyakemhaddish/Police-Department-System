@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF008A1A-8A25-4EC8-80F7-2F454E6C28D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>final_project</RootNamespace>
+    <AssemblyName>final_project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cases.Designer.cs">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Criminals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Criminals.Designer.cs">
+      <DependentUpon>Criminals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOG.Designer.cs">
+      <DependentUpon>LOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Officer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Officer.Designer.cs">
+      <DependentUpon>Officer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Police.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Police.Designer.cs">
+      <DependentUpon>Police.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Policecases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Policecases.Designer.cs">
+      <DependentUpon>Policecases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Policecriminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Policecriminal.Designer.cs">
+      <DependentUpon>Policecriminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="policedbDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>policedbDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cases.resx">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Criminals.resx">
+      <DependentUpon>Criminals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOG.resx">
+      <DependentUpon>LOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Officer.resx">
+      <DependentUpon>Officer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Police.resx">
+      <DependentUpon>Police.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Policecases.resx">
+      <DependentUpon>Policecases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Policecriminal.resx">
+      <DependentUpon>Policecriminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="policedbDataSet.xsc">
+      <DependentUpon>policedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet.xss">
+      <DependentUpon>policedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet1.xsc">
+      <DependentUpon>policedbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet1.xss">
+      <DependentUpon>policedbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet10.xsc">
+      <DependentUpon>policedbDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet10.xss">
+      <DependentUpon>policedbDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet11.xsc">
+      <DependentUpon>policedbDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet11.xss">
+      <DependentUpon>policedbDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet12.xsc">
+      <DependentUpon>policedbDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet12.xss">
+      <DependentUpon>policedbDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet13.xsc">
+      <DependentUpon>policedbDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet13.xss">
+      <DependentUpon>policedbDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet14.xsc">
+      <DependentUpon>policedbDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet14.xss">
+      <DependentUpon>policedbDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet15.xsc">
+      <DependentUpon>policedbDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet15.xss">
+      <DependentUpon>policedbDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet2.xsc">
+      <DependentUpon>policedbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet2.xss">
+      <DependentUpon>policedbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet3.xsc">
+      <DependentUpon>policedbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet3.xss">
+      <DependentUpon>policedbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet4.xsc">
+      <DependentUpon>policedbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet4.xss">
+      <DependentUpon>policedbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet5.xsc">
+      <DependentUpon>policedbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet5.xss">
+      <DependentUpon>policedbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet6.xsc">
+      <DependentUpon>policedbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet6.xss">
+      <DependentUpon>policedbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet7.xsc">
+      <DependentUpon>policedbDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet7.xss">
+      <DependentUpon>policedbDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet8.xsc">
+      <DependentUpon>policedbDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet8.xss">
+      <DependentUpon>policedbDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet9.xsc">
+      <DependentUpon>policedbDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="policedbDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>policedbDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="policedbDataSet9.xss">
+      <DependentUpon>policedbDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
